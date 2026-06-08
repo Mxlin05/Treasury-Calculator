@@ -1,0 +1,48 @@
+/*for every calcualtor row*/
+.row-container {
+    display: flex; /*flex organizes everything horizontally, center alignment, and ensures some space at bottom before next component*/
+    align-items: center;
+    margin-bottom: 20px;
+}
+/*for the profit of a row*/
+.profit-bar {
+    margin-left: 20px; /*push this component to the right with a border separation*/
+    padding-left: 20px;
+    border-left: 2px solid #ccc;
+    min-width: 200px;
+} 
+
+/*base button style*/
+.btn {
+    padding: 10px 20px; /*top/bottom 10px, left/right 20px of space between text*/
+    border: none; /*gets rid of horrible old border*/
+    border-radius: 6px; /*round the corners*/
+    font-size: 1rem; /*standardize text size to browser default*/
+    font-weight: 600; /*slightly bold text*/
+    cursor: pointer; /*changes mouse arrow to clicking hand*/
+    transition: all 0.2s ease; /*it makes hover animations smooth*/
+}
+
+/*for add treasury button. Main action*/
+.btn-primary {
+    background-color: #0f172a; /* Dark slate blue/black */
+    color: white;
+}
+
+/* The :hover pseudo-class activates when the mouse is over the button */
+.btn-primary:hover {
+    background-color: #334155; /* Lighter slate color on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle drop shadow */
+}
+
+/*for delete treasury button. A dangerous action*/
+.btn-danger {
+    background-color: #fef2f2; /* Very light red background */
+    color: #dc2626;            /* Deep red text */
+    border: 1px solid #f87171; /* Thin red border */
+}
+
+.btn-danger:hover {
+    background-color: #dc2626; /* Flips to solid red background */
+    color: white;              /* Flips to white text */
+}
