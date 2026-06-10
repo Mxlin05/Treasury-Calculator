@@ -1,42 +1,85 @@
-# sv
+```markdown
+# 📈 Treasury Calculator
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A fast, client-side web application built with Svelte 5 to calculate and aggregate expected profits across multiple treasury investments. 
 
-## Creating a project
+This project was built from the ground up using raw CSS and modern Svelte 5 architecture, demonstrating an understanding of component-based design, state management, and two-way data binding.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## ✨ Features
 
-```sh
-# create a new project
-npx sv create my-app
+* **Dynamic Rows:** Add or remove individual treasury calculation rows on the fly.
+* **Real-Time Calculation:** Profits are calculated instantly as the user types, blocking invalid keyboard inputs.
+* **Aggregate Totals:** Uses Svelte 5 `$bindable` and `$derived` runes to lift state from child components and calculate a real-time Grand Total.
+* **Responsive Styling:** Built entirely with raw CSS (Flexbox, custom button modifiers, and hover states) without relying on heavy external UI libraries.
+
+## 🛠️ Tech Stack
+
+* **Framework:** [Svelte 5](https://svelte.dev/) (SvelteKit)
+* **Languages:** HTML, CSS, JavaScript
+* **Environment:** Node.js
+
+---
+
+## 🚀 Installation & Setup
+
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+Make sure you have Node.js and npm installed on your machine.
+* [Download Node.js](https://nodejs.org/)
+
+### Quick Start
+
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/](https://github.com/)[YOUR-USERNAME]/Treasury-Calculator.git
+
 ```
 
-To recreate this project with the same configuration:
+2. **Navigate into the project directory**
+```bash
+cd Treasury-Calculator
 
-```sh
-# recreate this project
-npx sv@0.15.4 create --template minimal --no-types --install npm treasury-tracker
 ```
 
-## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+3. **Install the dependencies**
+```bash
+npm install
 
-```sh
+```
+
+
+4. **Start the development server**
+```bash
 npm run dev
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
 
-To create a production version of your app:
+5. **Open the app**
+Open your browser and navigate to `http://localhost:5173/` to see the calculator running!
 
-```sh
+---
+
+## 📦 Building for Production
+
+To create an optimized production build of the app, run:
+
+```bash
 npm run build
+
 ```
 
-You can preview the production build with `npm run preview`.
+You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should *not* be used to serve your app in production.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## 📝 License
+
+Distributed under the MIT License.
+
+```
+
+### What to edit before you push:
+* Make sure to swap out `[YOUR-USERNAME]` in the **Quick Start** section with your actual GitHub username so the clone link works perfectly for visitors!
+
+```
