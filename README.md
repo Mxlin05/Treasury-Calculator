@@ -1,5 +1,5 @@
 # sv
-npm run dev -- --open
+
 ```markdown
 # 📈 Treasury Calculator
 
@@ -54,7 +54,7 @@ npm install
 
 4. **Start the development server**
 ```bash
-npm run dev
+npm run dev -- --open
 
 ```
 
@@ -70,18 +70,3 @@ To create an optimized production build of the app, run:
 
 ```bash
 npm run build
-
-```
-
-You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should *not* be used to serve your app in production.
-
-## 📝 License
-
-Distributed under the MIT License.
-
-```
-
-### What to edit before you push:
-* Make sure to swap out `[YOUR-USERNAME]` in the **Quick Start** section with your actual GitHub username so the clone link works perfectly for visitors!
-
-```
