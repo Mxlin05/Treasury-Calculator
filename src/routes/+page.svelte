@@ -60,6 +60,44 @@
                         + Add Another Treasury
                     </button>
                 </div>
+
+                <div class="mt-2 border-t pt-6">
+                    <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wide mb-6">Potential Growth</h3>
+                    <div class="flex h-32 w-full">
+
+                        <div class="flex flex-col justify-between items-end pr-2 border-r border-gray-200 text-[10px] font-semibold text-gray-400 w-12 pb-1">
+                            <span>${Math.max(total_principal, total_principal + total_profit, 1).toFixed(0)}</span>
+                            <span>$0</span>
+                        </div>
+
+                        <div class="flex-1 flex items-end justify-around gap-6 border-b border-gray-200 pl-4 pb-1">
+                            <div class="relative w-1/2 h-full flex flex-col justify-end items-center group">
+                                <span class="absolute -top-6 text-xs font-bold text-slate-800 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    ${total_principal.toFixed(0)}
+                                </span>
+                                <div class="w-full bg-slate-800 rounded-t-md transition-all duration-500 ease-out"
+                                     style="height: {total_principal === 0 ? 0: (total_principal / Math.max(total_principal, (total_profit + total_principal), 1)) * 100}%; min-height: 4px;">
+                                </div>
+                            </div>
+    
+                            <div class="relative w-1/2 h-full flex flex-col justify-end items-center group">
+                                <span class="absolute -top-6 text-xs font-bold text-green-500 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    ${(total_principal + total_profit).toFixed(0)}
+                                </span>
+                                <div 
+                                    class="w-full bg-green-500 rounded-t-md transition-all duration-500 ease-out"
+                                    style="height: {total_profit === 0 ? 0 : ((total_profit + total_principal) / Math.max(total_principal, (total_profit + total_principal), 1)) * 100}%; min-height: 4px;"
+                                ></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="flex justify-around mt-2">
+                        <span class="text-xs font-semibold text-gray-500">Principal</span>
+                        <span class="text-xs font-semibold text-gray-500">Profit</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
