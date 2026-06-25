@@ -20,8 +20,13 @@
                 bind:value={principal} 
                 placeholder="Must be > 100" 
                 min="100" 
-                step="0.01"
-                class="mt-1 px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-500 w-full md:w-32"
+                step="100"
+                onkeydown={(e) => {
+                    if (e.key !== 'ArrowUp' && e.key !== 'ArrowDown' && e.key !== 'Tab'){
+                        e.preventDefault();
+                    }
+                }}
+                class="mt-1 px-4 py-2 caret-transparent cursor-default bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-500 w-full md:w-40"
                 />
         </label>
     
